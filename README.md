@@ -1,6 +1,8 @@
 # Operator HUD — Sci‑Fi Interactive Portfolio
 
-[![CI](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml)
+<!-- CI badge — uncomment after activating the workflow (see "Continuous integration" below):
+[![CI](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml) -->
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-36e6ff.svg)](LICENSE)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000.svg?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6.svg?logo=typescript&logoColor=white)
@@ -171,6 +173,22 @@ npm test           # first run also: npx playwright install chromium
 Covers: load + loadout switch (URL + content + no console errors), live GitHub
 module against a mocked API, axe accessibility (no serious/critical violations),
 and reduced‑motion (boot skipped, reveals disabled, content reachable).
+
+### Continuous integration
+
+A ready‑to‑use GitHub Actions workflow (lint → typecheck → build → Playwright on
+every push/PR) ships as **`docs/ci.yml.txt`**. It lives outside
+`.github/workflows/` on purpose — GitHub refuses to accept pushes that add a
+workflow file unless the token has the `workflow` scope. **To activate it:**
+
+- **GitHub web UI (easiest):** Add file → Create new file → name it
+  `.github/workflows/ci.yml` → paste the contents of `docs/ci.yml.txt` → Commit.
+  No special token scope needed.
+- **Locally:** with a `workflow`‑scoped token,
+  `mkdir -p .github/workflows && git mv docs/ci.yml.txt .github/workflows/ci.yml`,
+  then commit and push.
+
+Then uncomment the CI badge at the top of this README.
 
 ---
 
