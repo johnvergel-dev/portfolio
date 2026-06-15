@@ -22,7 +22,7 @@ export const projects: Project[] = [
     desc: "Web platform for a Colombian studio that 3D-prints and hand-paints collectible figures: filterable bento catalog, WhatsApp quote flow, build-time responsive images and a strict CSP. Live in production.",
     tags: ["frontend"],
     stack: ["React 19", "Vite 8", "React Router", "Playwright", "Lighthouse CI", "Vercel"],
-    href: "https://threedii.com",
+    href: "https://threedii-paint-studio.vercel.app",
     featured: true,
   },
   {
