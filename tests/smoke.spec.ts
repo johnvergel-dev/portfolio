@@ -52,16 +52,14 @@ test.describe("Operator HUD", () => {
       await page.route("**/api/github", (route) =>
         route.fulfill({ json: githubOk }),
       );
+      // "House Research" is tagged data; "Mi Cocina" is frontend-only.
       await page.goto("/?perfil=data");
-      await expect(
-        page.getByText("Feature Store & Training Pipeline"),
-      ).toBeVisible();
+      await expect(page.getByText("House Research")).toBeVisible();
+      await expect(page.getByText("Mi Cocina")).toHaveCount(0);
 
-      await page.getByRole("radio", { name: /BACKEND/i }).click();
-      await expect(page.getByText("Edge API Gateway")).toBeVisible();
-      await expect(
-        page.getByText("Feature Store & Training Pipeline"),
-      ).toHaveCount(0);
+      await page.getByRole("radio", { name: /FRONTEND/i }).click();
+      await expect(page.getByText("Mi Cocina")).toBeVisible();
+      await expect(page.getByText("House Research")).toHaveCount(0);
     });
   });
 });
