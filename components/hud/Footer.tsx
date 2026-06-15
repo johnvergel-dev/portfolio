@@ -30,15 +30,17 @@ export function Footer() {
           >
             <Github size={18} />
           </a>
-          <a
-            href={siteConfig.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-[var(--muted)] transition-colors hover:text-[var(--a)]"
-          >
-            <Linkedin size={18} />
-          </a>
+          {siteConfig.linkedinUrl ? (
+            <a
+              href={siteConfig.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-[var(--muted)] transition-colors hover:text-[var(--a)]"
+            >
+              <Linkedin size={18} />
+            </a>
+          ) : null}
           {siteConfig.email ? (
             <a
               href={`mailto:${siteConfig.email}`}

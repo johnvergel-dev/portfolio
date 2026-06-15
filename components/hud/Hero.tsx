@@ -99,9 +99,11 @@ export function Hero() {
           <HudButton href={githubUrl} external icon={Github} variant="solid">
             GITHUB
           </HudButton>
-          <HudButton href={siteConfig.linkedinUrl} external icon={Linkedin}>
-            LINKEDIN
-          </HudButton>
+          {siteConfig.linkedinUrl ? (
+            <HudButton href={siteConfig.linkedinUrl} external icon={Linkedin}>
+              LINKEDIN
+            </HudButton>
+          ) : null}
           {siteConfig.email ? (
             <HudButton href={`mailto:${siteConfig.email}`} icon={Mail}>
               CONTACT

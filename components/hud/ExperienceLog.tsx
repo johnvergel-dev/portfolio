@@ -21,9 +21,11 @@ export function ExperienceLog() {
         index="04"
         title="EXPERIENCE.LOG"
         status={
-          <HudButton href={siteConfig.linkedinUrl} external icon={Linkedin}>
-            LINKEDIN
-          </HudButton>
+          siteConfig.linkedinUrl ? (
+            <HudButton href={siteConfig.linkedinUrl} external icon={Linkedin}>
+              LINKEDIN
+            </HudButton>
+          ) : undefined
         }
       />
 
@@ -70,7 +72,7 @@ export function ExperienceLog() {
       )}
 
       <p className="telemetry mt-8 max-w-2xl text-[0.58rem] leading-relaxed text-[var(--muted)]">
-        {`// NOTE: LinkedIn exposes no free API for personal experience; this log is hand-maintained in data/experience.ts. Full history on LinkedIn.`}
+        {`// NOTE: this log is hand-maintained in data/experience.ts (LinkedIn has no free API for personal experience).`}
       </p>
     </HudSection>
   );

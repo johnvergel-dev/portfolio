@@ -60,7 +60,7 @@ const personLd = {
   ...(siteConfig.email ? { email: `mailto:${siteConfig.email}` } : {}),
   sameAs: [
     `https://github.com/${siteConfig.githubUser}`,
-    siteConfig.linkedinUrl,
+    ...(siteConfig.linkedinUrl ? [siteConfig.linkedinUrl] : []),
   ],
 };
 
