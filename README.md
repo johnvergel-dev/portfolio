@@ -1,7 +1,6 @@
 # Operator HUD — Sci‑Fi Interactive Portfolio
 
-<!-- CI badge — uncomment after activating the workflow (see "Continuous integration" below):
-[![CI](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml) -->
+[![CI](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/johnvergel-dev/portfolio/actions/workflows/ci.yml)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-36e6ff.svg)](LICENSE)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000.svg?logo=nextdotjs)
