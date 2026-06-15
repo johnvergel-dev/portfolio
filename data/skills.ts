@@ -4,69 +4,38 @@ import type { Skill } from "@/types";
  * Skill matrix. `level` (0–100) drives the animated telemetry bars; `group`
  * clusters related skills; `tags` controls which loadouts surface the skill.
  *
- * PLACEHOLDER values — calibrate to your real proficiencies.
+ * Levels are self-assessed and calibrated to real project work — tweak freely.
  */
 export const skills: Skill[] = [
   // Languages
-  {
-    name: "TypeScript",
-    level: 95,
-    group: "LANGUAGES",
-    tags: ["frontend", "backend"],
-  },
-  {
-    name: "JavaScript",
-    level: 95,
-    group: "LANGUAGES",
-    tags: ["frontend", "backend"],
-  },
-  { name: "Python", level: 90, group: "LANGUAGES", tags: ["data", "backend"] },
-  { name: "Go", level: 75, group: "LANGUAGES", tags: ["backend"] },
-  { name: "SQL", level: 85, group: "LANGUAGES", tags: ["data", "backend"] },
+  { name: "TypeScript", level: 85, group: "LANGUAGES", tags: ["frontend", "backend"] },
+  { name: "JavaScript", level: 88, group: "LANGUAGES", tags: ["frontend", "backend"] },
+  { name: "Python", level: 80, group: "LANGUAGES", tags: ["data", "backend"] },
+  { name: "SQL", level: 70, group: "LANGUAGES", tags: ["data", "backend"] },
 
   // Frontend
-  { name: "React / Next.js", level: 95, group: "FRONTEND", tags: ["frontend"] },
-  { name: "GSAP / Motion", level: 88, group: "FRONTEND", tags: ["frontend"] },
-  {
-    name: "WebGL / Three.js",
-    level: 72,
-    group: "FRONTEND",
-    tags: ["frontend"],
-  },
-  { name: "CSS / Tailwind", level: 92, group: "FRONTEND", tags: ["frontend"] },
-  {
-    name: "Accessibility (a11y)",
-    level: 85,
-    group: "FRONTEND",
-    tags: ["frontend"],
-  },
+  { name: "Vue 3", level: 88, group: "FRONTEND", tags: ["frontend"] },
+  { name: "React / Next.js", level: 84, group: "FRONTEND", tags: ["frontend"] },
+  { name: "Tailwind CSS", level: 85, group: "FRONTEND", tags: ["frontend"] },
+  { name: "GSAP / Motion", level: 72, group: "FRONTEND", tags: ["frontend"] },
+  { name: "WebGL / Three.js", level: 58, group: "FRONTEND", tags: ["frontend"] },
+
+  // Mobile / PWA
+  { name: "Capacitor / PWA", level: 82, group: "MOBILE", tags: ["frontend"] },
+  { name: "IndexedDB / Dexie", level: 75, group: "MOBILE", tags: ["frontend"] },
+
+  // Backend
+  { name: "Node.js / Express", level: 74, group: "BACKEND", tags: ["backend"] },
+  { name: "REST APIs", level: 76, group: "BACKEND", tags: ["backend"] },
+  { name: "PostgreSQL", level: 66, group: "BACKEND", tags: ["backend", "data"] },
+  { name: "Git / CI", level: 80, group: "BACKEND", tags: ["backend", "frontend"] },
 
   // Data / ML
-  { name: "PyTorch", level: 82, group: "DATA · ML", tags: ["data"] },
-  { name: "Pandas / NumPy", level: 90, group: "DATA · ML", tags: ["data"] },
-  { name: "Airflow / ETL", level: 80, group: "DATA · ML", tags: ["data"] },
-  {
-    name: "Vector / Embeddings",
-    level: 78,
-    group: "DATA · ML",
-    tags: ["data"],
-  },
-  {
-    name: "Experiment Tracking",
-    level: 75,
-    group: "DATA · ML",
-    tags: ["data"],
-  },
+  { name: "Pandas / NumPy", level: 70, group: "DATA · ML", tags: ["data"] },
+  { name: "PyTorch", level: 55, group: "DATA · ML", tags: ["data"] },
+  { name: "HuggingFace / NLP", level: 55, group: "DATA · ML", tags: ["data"] },
 
-  // Backend / Infra
-  { name: "Node.js / APIs", level: 90, group: "BACKEND", tags: ["backend"] },
-  {
-    name: "PostgreSQL",
-    level: 85,
-    group: "BACKEND",
-    tags: ["backend", "data"],
-  },
-  { name: "Docker / CI", level: 84, group: "BACKEND", tags: ["backend"] },
-  { name: "Kafka / Queues", level: 76, group: "BACKEND", tags: ["backend"] },
-  { name: "Observability", level: 80, group: "BACKEND", tags: ["backend"] },
+  // Automation
+  { name: "n8n / Automation", level: 68, group: "AUTOMATION", tags: ["backend", "data"] },
+  { name: "Web Scraping", level: 78, group: "AUTOMATION", tags: ["data", "backend"] },
 ];

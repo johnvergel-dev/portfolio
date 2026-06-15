@@ -5,25 +5,21 @@ import type { SiteConfig } from "@/types";
  *
  * ▸ TO PERSONALISE THE SITE, EDIT ONLY THIS FILE (and the other `data/*` files).
  *   No component contains hardcoded personal content.
- *
- * The values below marked `PLACEHOLDER` are coherent stand-ins — replace them
- * with the real data. `githubUser` is already wired to the live GitHub module.
  */
 export const siteConfig: SiteConfig = {
-  // PLACEHOLDER (derived from your GitHub handle) — your name, shown as the
-  // HUD callsign. Refine to your exact preferred display name.
+  // Name shown as the HUD callsign.
   callsign: "JOHN VERGEL",
-  // PLACEHOLDER — your professional title.
-  title: "Software Engineer",
-  // PLACEHOLDER — your location.
-  location: "Remote · UTC−5",
-  // Live GitHub handle powering the GITHUB.FEED module (verified to exist).
+  // Professional title / tagline.
+  title: "Full-Stack Developer · ML/AI & Automation",
+  // Location.
+  location: "Colombia · Remote-ready",
+  // Live GitHub handle powering the GITHUB.FEED module.
   githubUser: "johnvergel-dev",
-  // PLACEHOLDER — your real LinkedIn profile URL.
+  // TODO: verify this is your real LinkedIn URL before deploying (best guess).
   linkedinUrl: "https://www.linkedin.com/in/johnvergel",
   email: "jvergelc03@gmail.com",
-  // PLACEHOLDER — optional résumé link (PDF in /public or external URL). Leave
-  // undefined to hide the RESUME button.
+  // Optional résumé link (PDF in /public or external URL). Leave undefined to
+  // hide the RESUME button.
   resumeUrl: undefined,
 };
 

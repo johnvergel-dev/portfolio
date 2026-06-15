@@ -1,73 +1,76 @@
 import type { Project } from "@/types";
 
 /**
- * Project catalog. Each project declares the loadouts it belongs to via `tags`
- * and is filtered with `byProfile` (see `lib/filterByProfile`). Set `repo` to a
- * GitHub repository name to cross-reference live stars/forks/language later.
+ * Project catalog — real projects. Each declares the loadouts it appears in via
+ * `tags`; `byProfile` filters them and orders `featured` first. `repo` cross-
+ * references live GitHub stats. Client work is shown anonymized and WITHOUT a
+ * code link (proprietary).
  *
- * PLACEHOLDER content — replace with your real projects. The shape and tagging
- * are what matter; the switcher and filtering work automatically.
+ * TODO: verify the inferred stacks on the client entries below.
  */
 export const projects: Project[] = [
   {
     id: "operator-hud",
     name: "Operator HUD Portfolio",
-    desc: "This site: a sci-fi HUD with GSAP scroll choreography, a reactive WebGL particle field and a URL-driven loadout system.",
+    desc: "This site: a sci-fi HUD with GSAP scroll choreography, a reactive WebGL particle field, a URL-driven loadout system and a live GitHub feed.",
     tags: ["frontend"],
-    stack: ["Next.js", "TypeScript", "GSAP", "react-three-fiber", "Tailwind"],
+    stack: ["Next.js", "TypeScript", "GSAP", "react-three-fiber", "Tailwind", "Playwright"],
     href: "/",
+    repo: "portfolio",
     featured: true,
   },
   {
-    id: "telemetry-dashboard",
-    name: "Realtime Telemetry Dashboard",
-    desc: "Streaming metrics dashboard with virtualized charts and 60fps canvas rendering over a websocket feed.",
-    tags: ["frontend", "data"],
-    stack: ["React", "WebSockets", "D3", "Web Workers"],
-    featured: true,
-  },
-  {
-    id: "feature-store",
-    name: "Feature Store & Training Pipeline",
-    desc: "Reproducible ML pipeline: ingestion, feature versioning and batch/online serving with drift monitoring.",
-    tags: ["data"],
-    stack: ["Python", "PyTorch", "Airflow", "DuckDB"],
-    featured: true,
-  },
-  {
-    id: "vector-search",
-    name: "Semantic Vector Search API",
-    desc: "Low-latency embedding search service with hybrid ranking and an evaluation harness for retrieval quality.",
-    tags: ["data", "backend"],
-    stack: ["Python", "FastAPI", "pgvector", "Redis"],
-  },
-  {
-    id: "edge-gateway",
-    name: "Edge API Gateway",
-    desc: "Rate-limited, observable API gateway with token auth, request coalescing and structured tracing.",
-    tags: ["backend"],
-    stack: ["Go", "gRPC", "PostgreSQL", "OpenTelemetry"],
-    featured: true,
-  },
-  {
-    id: "event-sourcing",
-    name: "Event-Sourced Ledger",
-    desc: "Append-only ledger with CQRS projections, idempotent consumers and replayable state.",
-    tags: ["backend"],
-    stack: ["TypeScript", "Node", "Kafka", "PostgreSQL"],
-  },
-  {
-    id: "design-system",
-    name: "Motion Design System",
-    desc: "Accessible component library with a documented motion language and reduced-motion fallbacks baked in.",
+    id: "mi-cocina",
+    name: "Mi Cocina",
+    desc: "Offline-first pantry, recipe, shopping and nutrition manager. No account, no server — all data lives on-device via IndexedDB. Ships as an Android APK and an installable PWA.",
     tags: ["frontend"],
-    stack: ["React", "Storybook", "Framer Motion", "Radix"],
+    stack: ["Vue 3", "Vite", "Capacitor 8", "PWA", "Dexie/IndexedDB", "Pinia"],
+    href: "https://github.com/johnvergel-dev/App-cocina",
+    repo: "App-cocina",
+    featured: true,
   },
   {
-    id: "anomaly-detection",
-    name: "Anomaly Detection Service",
-    desc: "Unsupervised anomaly detection on time-series with alerting and a feedback loop for label collection.",
+    id: "house-research",
+    name: "House Research",
+    desc: "Apartment-hunting research tool: a Python pipeline that scrapes listings across portals, then normalizes, filters and exports clean datasets.",
     tags: ["data", "backend"],
-    stack: ["Python", "scikit-learn", "Kafka", "Grafana"],
+    stack: ["Python", "Web scraping", "Pandas", "CSV / ETL"],
+    href: "https://github.com/johnvergel-dev/House-Research",
+    repo: "House-Research",
+    featured: true,
+  },
+
+  // ── Client work (proprietary — code private, shown anonymized) ──
+  {
+    id: "nutrition-brand-site",
+    name: "Nutrition Brand Website",
+    desc: "Production marketing site for a nutrition company — performance-tuned (caching, image/LCP optimization) with a maintainable content layer.",
+    tags: ["frontend"],
+    stack: ["Next.js", "React", "TypeScript"],
+    featured: false,
+  },
+  {
+    id: "industrial-services-site",
+    name: "Industrial Services Corporate Site",
+    desc: "Corporate website and contact funnel for an industrial-services company, delivered as a fast static build with a Next.js variant.",
+    tags: ["frontend"],
+    stack: ["Next.js", "HTML / CSS", "JavaScript"],
+    featured: false,
+  },
+  {
+    id: "fleet-management-app",
+    name: "Fleet Management Platform",
+    desc: "Web app for managing a transport company's vehicle fleet — Spanish-localized, form-driven workflows. (In development.)",
+    tags: ["frontend", "backend"],
+    stack: ["Vue 3", "Vite"],
+    featured: false,
+  },
+  {
+    id: "interactive-landing",
+    name: "Interactive Brand Landing",
+    desc: "Interactive landing / brand microsite built for a client proposal.",
+    tags: ["frontend"],
+    stack: ["JavaScript", "HTML / CSS"],
+    featured: false,
   },
 ];
