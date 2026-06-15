@@ -1,12 +1,9 @@
 import type { Project } from "@/types";
 
 /**
- * Project catalog — real projects. Each declares the loadouts it appears in via
- * `tags`; `byProfile` filters them and orders `featured` first. `repo` cross-
- * references live GitHub stats. Client work is shown anonymized and WITHOUT a
- * code link (proprietary).
- *
- * TODO: verify the inferred stacks on the client entries below.
+ * Project catalog — real work. `tags` drive loadout visibility; `byProfile`
+ * orders `featured` first. `repo` cross-references live GitHub stats; `href`
+ * points at the live site or repo.
  */
 export const projects: Project[] = [
   {
@@ -20,9 +17,27 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "threedii",
+    name: "Threedii Paint Studio",
+    desc: "Web platform for a Colombian studio that 3D-prints and hand-paints collectible figures: filterable bento catalog, WhatsApp quote flow, build-time responsive images and a strict CSP. Live in production.",
+    tags: ["frontend"],
+    stack: ["React 19", "Vite 8", "React Router", "Playwright", "Lighthouse CI", "Vercel"],
+    href: "https://threedii.com",
+    featured: true,
+  },
+  {
+    id: "nutriline",
+    name: "Nutriline Corp",
+    desc: "Full-stack site + JWT-secured admin panel for a poultry-nutrition company: SSR product catalog with per-product pages, resources library and contact funnel. Cut mobile LCP from ~17s to ~2.9s.",
+    tags: ["frontend", "backend"],
+    stack: ["Next.js 14", "React", "Tailwind", "Sequelize/MySQL", "JWT", "zod"],
+    href: "https://nutrilinecorp.com",
+    featured: true,
+  },
+  {
     id: "mi-cocina",
     name: "Mi Cocina",
-    desc: "Offline-first pantry, recipe, shopping and nutrition manager. No account, no server — all data lives on-device via IndexedDB. Ships as an Android APK and an installable PWA.",
+    desc: "Offline-first pantry, recipe, shopping and nutrition manager. No account, no server — all data on-device via IndexedDB. Ships as an Android APK and an installable PWA.",
     tags: ["frontend"],
     stack: ["Vue 3", "Vite", "Capacitor 8", "PWA", "Dexie/IndexedDB", "Pinia"],
     href: "https://github.com/johnvergel-dev/App-cocina",
@@ -39,38 +54,12 @@ export const projects: Project[] = [
     repo: "House-Research",
     featured: true,
   },
-
-  // ── Client work (proprietary — code private, shown anonymized) ──
   {
-    id: "nutrition-brand-site",
-    name: "Nutrition Brand Website",
-    desc: "Production marketing site for a nutrition company — performance-tuned (caching, image/LCP optimization) with a maintainable content layer.",
-    tags: ["frontend"],
-    stack: ["Next.js", "React", "TypeScript"],
-    featured: false,
-  },
-  {
-    id: "industrial-services-site",
-    name: "Industrial Services Corporate Site",
-    desc: "Corporate website and contact funnel for an industrial-services company, delivered as a fast static build with a Next.js variant.",
-    tags: ["frontend"],
-    stack: ["Next.js", "HTML / CSS", "JavaScript"],
-    featured: false,
-  },
-  {
-    id: "fleet-management-app",
+    id: "fleet-management",
     name: "Fleet Management Platform",
-    desc: "Web app for managing a transport company's vehicle fleet — Spanish-localized, form-driven workflows. (In development.)",
+    desc: "Web app for managing a transport company's vehicle fleet — Spanish-localized, form-driven workflows. In development (private).",
     tags: ["frontend", "backend"],
     stack: ["Vue 3", "Vite"],
-    featured: false,
-  },
-  {
-    id: "interactive-landing",
-    name: "Interactive Brand Landing",
-    desc: "Interactive landing / brand microsite built for a client proposal.",
-    tags: ["frontend"],
-    stack: ["JavaScript", "HTML / CSS"],
     featured: false,
   },
 ];

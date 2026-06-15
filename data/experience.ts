@@ -1,38 +1,41 @@
 import type { ExperienceItem } from "@/types";
 
 /**
- * EXPERIENCE.LOG — hand-maintained career history.
+ * EXPERIENCE.LOG — hand-maintained (LinkedIn has no free read API).
  *
- * Why hand-maintained: LinkedIn has **no free API** to read a personal
- * profile's experience/education, and scraping it violates ToS. So we keep
- * experience here (typed + filterable) and link out via `siteConfig.linkedinUrl`.
- *
- * ⚠️ These entries are built from known, real work but still need YOUR review
- *    before deploying:
- *      • add your university name (marked TODO below)
- *      • confirm the freelance start date
- *      • add any internships / jobs not captured here
+ * ⚠️ TODO before deploying: fill the cultural-exchange org/role/dates (marked
+ *    below) and confirm the freelance start date.
  */
 export const experience: ExperienceItem[] = [
   {
     role: "Freelance Full-Stack Developer",
     org: "Independent · Colombia (remote)",
-    period: "2024 — Present", // TODO: confirm your real start date
+    period: "2025 — Present", // TODO: confirm your real start date
     tags: ["frontend", "backend"],
     bullets: [
-      "Built and shipped production websites and web apps for businesses across the nutrition, industrial-services and transport sectors.",
-      "Delivered performance-tuned Next.js sites and a Vue 3 fleet-management app, owning each project end-to-end from design to deploy.",
-      "Worked directly with clients to turn requirements into maintainable, typed codebases.",
+      "Built and shipped production web apps for real clients: Threedii Paint Studio (React 19 + Vite SPA, catalog + WhatsApp quote flow) and Nutriline Corp (Next.js 14 site + JWT-secured admin panel over MySQL).",
+      "Cut Nutriline's mobile LCP from ~17s to ~2.9s and page weight from 4.4MB to ~0.5MB via SSR, a sharp image pipeline and low-cost animations.",
+      "Worked directly with business owners — turning requirements into maintainable, typed codebases, and handling deploys, security headers and SEO.",
     ],
   },
   {
     role: "B.Sc. Computer Science (in progress)",
-    org: "TODO: add your university", // ← replace before deploying
+    org: "Universidad Santo Tomás",
     period: "Expected 2026",
     tags: ["frontend", "data", "backend"],
     bullets: [
       "Computer Science undergraduate focused on full-stack web, applied ML/AI and automation.",
       "Self-directed builds: an offline-first mobile app (Capacitor/PWA), a WebGL portfolio, and a Python data pipeline.",
+    ],
+  },
+  {
+    role: "Team Member", // TODO: your exact role
+    org: "Cultural Exchange Program", // TODO: program / organization name
+    period: "Present", // TODO: dates
+    tags: ["frontend", "data", "backend"],
+    bullets: [
+      "Lead and collaborate within a multicultural team — communication, organization and reliability in a non-technical setting.",
+      "Strengths I carry into engineering: leadership, a friendly and committed attitude, and a fast, eager-to-learn mindset.",
     ],
   },
 ];

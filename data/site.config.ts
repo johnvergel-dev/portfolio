@@ -15,8 +15,8 @@ export const siteConfig: SiteConfig = {
   location: "Colombia · Remote-ready",
   // Live GitHub handle powering the GITHUB.FEED module.
   githubUser: "johnvergel-dev",
-  // TODO: verify this is your real LinkedIn URL before deploying (best guess).
-  linkedinUrl: "https://www.linkedin.com/in/johnvergel",
+  // No LinkedIn yet — left empty; the LinkedIn buttons auto-hide when this is "".
+  linkedinUrl: "",
   email: "jvergelc03@gmail.com",
   // Optional résumé link (PDF in /public or external URL). Leave undefined to
   // hide the RESUME button.
